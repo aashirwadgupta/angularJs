@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Anchor Scroll Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../anchor-scroll-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+<!-- ng-list directive gives us a text input that semalesly converts from text string into delimited string
+We can also define our own delimiter or use regex -->
+<body>
+	<div ng-controller="MainController as main">
+	
+		<a id="topLink" href="" ng-click="main.jumpToBottom()">This is top. Click to go to the bottom.</a>
+		<div style="height:10000px">Hello</div>
+		<a id="bottomLink" href="" ng-click="main.jumpToTop()">This is bottom. Click to go to the top.</a>
+	</div>
+</body>
+</html>

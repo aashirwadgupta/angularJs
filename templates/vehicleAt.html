@@ -1,0 +1,12 @@
+<div>
+	<ul>
+		<li> {{ year }}</li>
+		<li> {{ make }}</li>
+		<li> {{ model }}</li>
+		<!-- will not work as angular will bind it as string so info is no more an object -->
+		<li> {{ info.price }}</li>
+		<li> {{ info }}</li>
+	</ul>
+	<p> Change Year? </p>
+	<p><input type="text" ng-model="year"></p>
+</div>

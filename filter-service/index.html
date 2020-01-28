@@ -1,0 +1,34 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Custom Filter Services</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../filter-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>	
+	<div ng-controller="MainController as main">
+		<p>First Value Unfiltered: </p>
+		<p>{{ main.firstValue }}</p>
+		<hr/>
+		<!-- Doing via markup, applies the filter and not make changes to the value
+		EX- Currency conversion -->
+		<p>First Value filtered: </p>
+		<p>{{ main.firstValue | dashes }}</p>
+		<hr/>
+		<p>Second Value from Controller</p>
+		<p> {{ main.secondValue }}</p>
+		<hr/>
+		
+		<!--applying the filter and changing the value 
+		EX - Storing the value in DB on our choice -->
+		<p>Enter Value for filtering</p>
+		<input type='text' ng-model="main.inputValue" ng-change="main.applyFilter()"></p>
+		<p>Third Value:</p>
+		<p>{{ main.thirdValue }}</p>
+	</div>	
+	
+</body>
+</html>

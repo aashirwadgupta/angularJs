@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Routing using location or Replace</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-route.js"></script>
+	<script type="text/javascript" src="../route-location/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div>
+		<a href="#/welcome">Welcome</a>
+		<a href="#/about">About Us</a>
+	</div>
+	
+	<div ng-controller="NavController as nav">
+		<button ng-click="nav.goto('/welcome')">Welcome</button>
+		<vr/>
+		<button ng-click="nav.goto('/about')">About Us</button>
+	</div>	
+	
+	<ng-view></ng-view>
+	
+</body>
+</html>

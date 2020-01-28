@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Mouse Events Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../ng-mouse-events/app.js"></script>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<div class="test-div" 
+			ng-mousedown="main.doMouseDown()"
+			ng-mouseup="main.doMouseUp()"
+			ng-mouseenter="main.doMouseEnter()"
+			ng-mouseleave="main.doMouseLeave()"
+			ng-mouseover="main.doMouseOver()"
+		>
+			<div ng-mousemove="main.doMouseMove($event)"></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	<hr/>
+	
+	<p> Mouse Down Count: {{ main.mouseDownCount }}</p>
+	<p> Mouse Up Count: {{ main.mouseDownCount }}</p>
+	<p> Mouse Enter Count: {{ main.mouseDownCount }}</p>
+	<p> Mouse Leave Count: {{ main.mouseDownCount }}</p>
+	<p> Mouse Move Count: {{ main.mouseDownCount }}</p>
+	<p> Mouse move: {{ main.mouseX }}, {{ main.mouseY }}</p>
+	</div>
+</body>

@@ -1,0 +1,36 @@
+<html ng-app="myApp">
+
+<head>
+	<title>NG-IF Directive</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../angular-ng-if/app.js"></script>
+	<style>		
+	</style>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		
+		<p>Show User Info?
+			<input type="radio" ng-model="showUser" ng-value="true">Yes
+			<input type="radio" ng-model="showUser" ng-value="false">No
+		</p>
+		
+		<hr/>
+		<!-- Hobby will be replaced everytime when radio button status changes as it is primitive and not binded by . syntax
+		To do this change name and add a hobby and then click on no and then back to yes. you will observe the name is new one and hobby is unchanged -->
+		<div ng-if="showUser == true">
+			<ul>
+				<li>{{ user.name }}</li>
+				<li>{{ user.age }}</li>
+				<li>{{ user.isActive }}</li>
+				<li>{{ hobbies }}</li>
+			</ul>
+			
+			<hr/>
+			
+			<p>Name: <input type="text" ng-model="user.name"></p>
+			<p>Hobbies: <textarea type="text" ng-model="hobbies"></textarea></p>
+		</div>	
+	</div>
+</body>
+</html>

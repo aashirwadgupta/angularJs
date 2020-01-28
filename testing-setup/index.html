@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Angular js Testing Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-mocks.js"></script>
+	<script type="text/javascript" src="../testing-setup/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		<button ng-click = "main.getData()">Get Data</button>
+		<hr/>
+		<p> Data: </p>
+		<p> {{ main.data }}</p>
+	</div>
+</body>
+</html>

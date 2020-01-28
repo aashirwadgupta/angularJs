@@ -1,0 +1,29 @@
+<html ng-app="myApp">
+<!-- ngHref and ngSrc directives ensures that the browser does not act too fast to request an image yet not rendered or 
+a clickable link to invalid destination -->
+<head>
+	<title>NgHrefSrc - Scope Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../ng-href-src/app.js"></script>
+	<style>
+		.even {	
+			background-color: #aaeeee;
+		}
+		.odd {
+			background-color: #cccccc;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+	<!-- image gets rendered but browser has already made a request
+		<p><img src="{{main.imageUrl}}" width="400" height="300"></p> -->
+		<!--valid one -->
+		<p><img ng-src="{{main.imageUrl}}" width="400" height="300"></p>
+	<!-- in case of complex page (slow loading) then there is possibility of link pointing to literal binding info
+		<p><a href="{{main.linkUrl}}" target="_blank">Go to Angular2 website</a></p> -->
+		<!--valid one -->
+		<p><a ng-href="{{main.linkUrl}}" target="_blank">Go to Angular2 website from ng-href</a></p>
+	</div>
+</body>
+</html>

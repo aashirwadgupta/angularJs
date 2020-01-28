@@ -1,0 +1,26 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Locale Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../i18n/angular-locale_ru.js"></script>
+	<!-- 
+	<script type="text/javascript" src="../i18n/angular-locale_hi-in.js"></script>
+	<script type="text/javascript" src="../i18n/angular-locale_ru.js"></script>
+	<script type="text/javascript" src="../i18n/angular-locale_en.js"></script>
+	<script type="text/javascript" src="../i18n/angular-locale_fr.js"></script>
+	-->
+	<script type="text/javascript" src="../locale-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+<!-- ng-list directive gives us a text input that semalesly converts from text string into delimited string
+We can also define our own delimiter or use regex -->
+<body>
+	<div ng-controller="MainController as main">
+	
+		<p>The current date in the current language is {{ main.date | date:formattedDate }}</p>
+		<p>Cost per year {{ main.cost | currency }}</p>
+	</div>
+</body>
+</html>

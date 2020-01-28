@@ -1,0 +1,26 @@
+<html ng-app="myApp">
+
+<head>
+	<title>NgFocusBlur - Scope Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../ng-focus-blur/app.js"></script>
+	<style>
+		.even {	
+			background-color: #aaeeee;
+		}
+		.odd {
+			background-color: #cccccc;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<p>Enter your name:</p>
+		<p><input type="text" autofocus ng-model="main.user.name" ng-focus="main.sayHello()" ng-blur="main.sayGoodbye()"></p>
+		
+		<hr/>
+		
+		<p>{{ main.message }}</p>
+	</div>
+</body>
+</html>

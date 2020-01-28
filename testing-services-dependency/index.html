@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Testing Services Dependecy </title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-mocks.js"></script>
+	<script type="text/javascript" src="../testing-services-dependency/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		<button ng-click="main.getName()">Get Name</button>
+		<hr/>
+		<p> {{ main.name }}</p>
+		
+	</div>
+</body>
+</html>

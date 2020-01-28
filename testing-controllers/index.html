@@ -1,0 +1,38 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Angular js Testing Service - Testing Controllers </title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-mocks.js"></script>
+	<script type="text/javascript" src="../testing-controllers/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		<!--
+		<h1>Enter a number to get it's value squared: </h1>
+		<p>
+			<input type="text" ng-model="main._inputValue">
+			<button ng-click = "main.calculateSquare()">Calculate Square</button>
+		</p>
+		<hr/>
+		<p ng-show="main.inputValue !==null">The square of {{ main.inputValue }} is {{ main.result }} </p>
+		-->
+		
+		<h1>Enter two numbers for calculations </h1>
+		<p>Value 1:<input type="text" ng-model="main.value1"></p>
+		<p>Value 2:<input type="text" ng-model="main.value2"></p>
+		<p>
+			<button ng-click = "main.add(main.value1, main.value2)">Add</button>
+			<button ng-click = "main.subtract(main.value1, main.value2)">Subtract</button>
+			<button ng-click = "main.divide(main.value1, main.value2)">Divide</button>
+			<button ng-click = "main.multiply(main.value1, main.value2)">Multiply</button>
+		</p>
+		<hr/>
+		<p ng-show="main.inputValue !==null">Result is: {{ main.result }} </p>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Root Scope Services</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../root-scope-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>	
+	<div ng-controller="MainController">
+		<p>Root Scope Value: </p>
+		<p>{{ baseValue }}</p>
+		<hr/>
+		<button ng-click="sayHello()">Say Hello</button>
+	</div>	
+	
+</body>
+</html>

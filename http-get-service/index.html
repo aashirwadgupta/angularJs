@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Http Get Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../http-get-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		<p>Enter the name: <input type="text" ng-model="main.model.searchName"></p>
+		<p><button ng-click="main.model.getDataOfPerson(main.model.searchName)">Get Data from Github</button></p>
+		
+		<hr/>
+		<p>Name : {{main.model.name}}</p>
+		<p>Located at : {{main.model.location}}</p>
+		<p>Email address : {{main.model.email}}</p>
+	</div>
+</body>
+</html>

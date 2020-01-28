@@ -1,0 +1,18 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Nested Directives Communication</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../communication-between-nested-directives/app.js"></script>
+	
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<tst-school-view>
+			<tst-student name="Aashirwad Gupta" student-number="4324010"></tst-student>
+			<tst-student name="Random Student" student-number="142563"></tst-student>
+			<tst-student name="More Student" student-number="748596"></tst-student>
+		</tst-school-view>
+	</div>
+</body>
+</html>

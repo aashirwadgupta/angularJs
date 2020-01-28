@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Isolate Scope Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../isolate-scope/app.js"></script>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<tst-vehicle-view item="firstItem"></tst-vehicle-view>
+		<!--<div item="firstItem">
+			<ul>
+				<li>{{ item.year }}</li>
+				<li>{{ item.make }}</li>
+				<li>{{ item.model }}</li>
+				<li>{{ item.price | currency }}</li>
+			</ul>
+		</div> -->
+		
+		<tst-vehicle-view item="secondItem"></tst-vehicle-view>
+	</div>
+</body>

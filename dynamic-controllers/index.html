@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Dynamic Controllers</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../dynamic-controllers/app.js"></script>
+	
+	<style>
+		p {
+			border:1px solid #000000;
+		}
+		.area-on {
+			border: 1px solid #ff0000;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<tst-animal-view item="bird" controller-name="BirdController"></tst-animal-view>		
+		<tst-animal-view item="horse" controller-name="HorseController"></tst-animal-view>		
+		<tst-animal-view item="snake" controller-name="SnakeController"></tst-animal-view>		
+	</div>
+</body>
+</html>

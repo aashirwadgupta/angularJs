@@ -1,0 +1,29 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Ng-List Directive</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../angular-ng-list/app.js"></script>
+	<style>		
+	</style>
+</head>
+<!-- ng-list directive gives us a text input that semalesly converts from text string into delimited string
+We can also define our own delimiter or use regex -->
+<body>
+	<div ng-controller="MainController as main">
+		
+		<p>Edit Names: </p>
+		<!-- We can also put a regex to delimit the underlined input display -->
+		<p><input type="text" ng-list="|" ng-model="main.names"></p>
+		
+		<hr/>
+		
+		<p>Binding to names: {{ main.names }}</p>
+		
+		<p>Type of names is: {{ main.getType(main.names) }}</p>
+		
+		<p>First name in array: {{ main.names[0] }}</p>
+		
+	</div>
+</body>
+</html>

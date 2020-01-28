@@ -1,0 +1,59 @@
+<html ng-app="myApp">
+
+<head>
+	<title>NgModel - Scope Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../ng-model/app.js"></script>
+	<style>
+		.even {	
+			background-color: #aaeeee;
+		}
+		.odd {
+			background-color: #cccccc;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<table class="user-form">
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" ng-model="main.user.firstName"></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" ng-model="main.user.lastName"></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" ng-model="main.user.email"></td>
+			</tr>
+			<tr>
+				<td>Add to mailing list?</td>
+				<td><input type="checkbox" ng-model="main.user.optIn"></td>
+			</tr>
+			<tr>
+				<td>Comments:</td>
+				<!-- if the object doesnot exists then angular will create it -->
+				<td><textarea ng-model="main.user.comments"></textarea></td>
+			</tr>
+			<tr>
+				<td>Preferred Color?</td>
+				<td>
+					<select ng-model="main.user.selectedColor">
+						<option ng-repeat="option in main.colors" value="{{option.value}}">{{option.name}}</option>
+					<select>
+				</td>
+			</tr>
+		</table>
+		
+		<hr/>
+		
+		<p>Name: {{ main.user.firstName + ' ' + main.user.lastName }}</p>
+		<p>Email: {{ main.user.email }}</p>
+		<p>Opt In? {{ main.user.optIn }}</p>
+		<p>Comments: {{ main.user.comments }}</p>
+		<p>Preferred Color?:<div style="width:16px;height:20px;background-color:{{ main.user.selectedColor }}"></div></p>
+	</div>
+</body>
+</html>

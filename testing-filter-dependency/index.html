@@ -1,0 +1,37 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Testing Filter Dependency</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-mocks.js"></script>
+	<script type="text/javascript" src="../testing-filter-dependency/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>	
+	<div ng-controller="MainController as main">
+		<p>First Value Unfiltered: </p>
+		<p>{{ main.firstValue }}</p>
+		<hr/>
+		
+		<p>First Value filtered: </p>
+		<p>{{ main.firstValue | transform:'dashes' }}</p>
+		<hr/>
+		
+		<p>Second Value from Controller</p>
+		<p> {{ main.secondValue }}</p>
+		<hr/>
+		
+		<!--applying the filter and changing the value 
+		EX - Storing the value in DB on our choice -->
+		<p>Enter Value for filtering</p>
+		<p><input type='text' ng-model="main.inputValue"></p>
+		<button ng-click="main.applyDashesFilter()">Apply Dashes</button>
+		<button ng-click="main.applyCapitalizeFilter()">Apply Capitalize</button>
+		<p>Third Value:</p>
+		<p>{{ main.thirdValue }}</p>
+	</div>	
+	
+</body>
+</html>

@@ -1,0 +1,1 @@
+//use the sh file if on linux server, bat file if on windows server

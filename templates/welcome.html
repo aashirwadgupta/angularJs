@@ -1,0 +1,24 @@
+<div>
+	<h3>Welcome</h3>
+	<p>This is the <strong>Welcome</strong> page.</p>
+	<p>{{vm.details}}</p>
+	<hr/>
+	<p>Query String Parameters:</p>
+	<p>{{vm.params}}</p>
+	
+	<!--for router reloading -->
+	<hr/>
+	<p>Enter Comments:</p>
+	<p><textarea ng-model="vm.comments"></textarea></p>
+	<hr/>
+	<p>You want to reload</p>
+	<p>{{vm.comments}}</p>
+	<hr/>
+	<button ng-click="vm.reload()">Reload</button>
+	
+	<!-- route custom properties -->
+	<hr/>
+	<p>Data:</p>
+	<p>{{vm.data}}</p>
+	
+</div>

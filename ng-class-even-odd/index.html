@@ -1,0 +1,26 @@
+<html ng-app="myApp">
+<!-- ngClassEven and ngClassOdd directives are used in conjuction to ngRepeat directives for changing style for alternate rows -->
+<head>
+	<title>NgClassEvenOdd - Scope Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../ng-class-even-odd/app.js"></script>
+	<style>
+		.even {	
+			background-color: #aaeeee;
+		}
+		.odd {
+			background-color: #cccccc;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<table>
+			<tr ng-repeat="item in main.foodList" ng-class-even="'even'" ng-class-odd="'odd'">
+				<td>{{ item.name }}</td>
+				<td>{{ item.price }}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

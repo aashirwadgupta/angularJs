@@ -1,0 +1,29 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Observing Changes</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../observing-changes/app.js"></script>
+	<style>
+		.freezing {
+			color: blue;
+		}
+		.normal {
+			color:green;
+		}
+		.hot {
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<div tst-thermometer temperature="{{ main.currentTemperature }}"></div>
+		
+		<hr/>
+		
+		<p>Please enter the current temperature:</p>
+		<p><input type="text" ng-model="main.currentTemperature"></p>
+	</div>
+</body>
+</html>

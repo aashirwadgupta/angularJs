@@ -1,0 +1,15 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Communication between directives</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../communication-between-directives/app.js"></script>
+	
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<tst-school-view tst-course-physics tst-course-biology tst-course-chemistry>
+		</tst-school-view>	
+	</div>
+</body>
+</html>

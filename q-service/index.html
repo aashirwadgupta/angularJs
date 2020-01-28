@@ -1,0 +1,54 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Http Q Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../q-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		<h3>Enter the name:</h3> 
+		<p>
+			<input type="text" ng-model="main.searchName">
+			<button ng-click="main.getUser(main.searchName)">Get Data from Github</button>
+		</p>
+		
+		<hr/>
+		
+		<p><button ng-click="main.getSomeUsers()">Get few Users</button></p>
+		<p><button ng-click="main.getUsersAtOnce()">Get few Users with $q.all</button></p>
+		
+		<hr/>
+		
+		<ul>
+			<li ng-repeat="user in main.users">
+				<p>Name : {{user.name}}</p>
+				<p>Located at : {{user.location}}</p>
+				<p>Email address : {{user.email}}</p>
+			</li>
+		</ul>
+		
+		<hr/>
+		<p> Asynchronous calls testing</p>
+		<h3>Get Users</h3>
+		<p><button ng-click="main.getUsersSync()">Get Users Sync</button></p>
+		<p><button ng-click="main.getUsersAsyncBad()">Get Users Async Bad</button></p>
+		<p><button ng-click="main.getUsersAsync(true)">Get Users Async Success</button></p>
+		<p><button ng-click="main.getUsersAsync(false)">Get Users Async Failure</button></p>
+		
+		<hr/>
+		
+		<ul>
+			<li ng-repeat="user in main.users">
+				<p>Name : {{user.name}}</p>
+				<p>Id : {{user.id}}</p>
+			</li>
+		</ul>
+		
+		<hr/>
+	</div>
+</body>
+</html>

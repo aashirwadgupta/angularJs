@@ -1,0 +1,18 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Window Document Services</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../window-document-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>	
+	<div ng-controller="MainController as main">
+		<button ng-click = "main.useWindowService()">Use Window Service</button>
+		<button ng-click = "main.useDocService()">Use Document Service</button>
+	</div>	
+	
+</body>
+</html>

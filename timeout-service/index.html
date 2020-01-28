@@ -1,0 +1,21 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Timeout Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../timeout-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+	
+		<p><button ng-click="main.startTimeout()">Start Timeout</button></p>
+		<p><button ng-click="main.cancelTimeout()">Cancel Timeout</button></p>
+		<p>Delay: <input type="text" ng-model="main.delay"</p>
+		<hr/>
+		<p> {{ main.message }}</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Http Resource Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-resource.js"></script>
+	<script type="text/javascript" src="../http-resource-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		
+		<h3>Add User</h3>
+		<p>User Name: <input type="text" ng-model="main.name"></p>
+		<p><button ng-click="main.addUser(main.name)">Add User</button></p>
+		
+		<hr/>
+		
+		<h3>Get User</h3>
+		<p>USer Id: <input type="text" ng-model="main.id"></p>
+		<p>
+			<button ng-click="main.getUser(main.id)">Get USer</button>
+			<button ng-click="main.deleteUser(main.id)">Delete User</button>
+		</p>
+		
+		<hr/>
+		
+		<h3>User Info:</h3>
+		<p>{{ main.selectedUser }}</p>
+		
+		<hr/>
+		
+		<h3>All Users</h3>
+		<p><button ng-click="main.getUser()">Get Users</button></p>
+		<ul>
+			<li ng-repeat="user in main.users">
+				{{ user.name }} ({{ user.id }})
+			</li>
+		</ul>
+		
+	</div>
+</body>
+</html>

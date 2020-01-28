@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using at sign Scope Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../using-at-sign/app.js"></script>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<span tst-vehicle-view year="2013" make="Ford" info="{{ main.firstItemInfo }}" model="Figo"></span>
+		<span tst-vehicle-view year="2012" make="Fiat" info="{{ main.secondItemInfo }}" model="Punto"></span>
+		
+		<hr/>
+		
+		<p> First Item: {{ main.firstItemInfo }}</p>
+		<p> Second Item: {{ main.secondItemInfo }}</p>
+		
+		<hr/>
+		
+		<p>First Item Price: </p>
+		<p><input type="text" ng-model="main.firstItemInfo.price"></p>
+		
+		<p>Second Item Price: </p>
+		<p><input type="text" ng-model="main.secondItemInfo.price"></p>
+		
+	</div>
+</body>

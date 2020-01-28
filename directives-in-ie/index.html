@@ -1,0 +1,17 @@
+<html ng-app="myApp">
+
+<head>
+	<title>NgDirective in IE - Scope Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../directives-in-ie/app.js"></script>
+	
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<p>Attribute: <span my-directive></span></p>
+		<p>Class: <span class='my-directive'></span></p>
+		<!-- IE8 will not be able to rendered the element directive-->
+		<p>Element: <my-directive></my-directive> </p>
+	</div>
+</body>
+</html>

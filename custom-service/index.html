@@ -1,0 +1,42 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Custom Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../custom-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		
+		<p>Edit from Service: <input type="text" ng-model="main.model.user.name"></p>
+		<p><button ng-click="main.model.sayHello()">Say Hello</button></p>
+		
+		<!-- First Controller and SecondController won't have direct relationship with each other so won't be able to access each other's elements -->
+		
+		<div ng-controller="FirstController as first">
+		
+			<p>Edit First: <input type="text" ng-model="first.user.name"></p>
+			<hr/>
+			<p>Shared from Service: {{first.model.user.name}}</p>
+			<p>From First Controller: {{first.user.name}}</p>
+			<p>From Second Controller: {{second.user.name}}</p>
+			<p><button ng-click="first.model.sayHello()">Say Hello</button></p>
+			
+		</div>
+		
+		<div ng-controller="SecondController as second">
+		
+			<p>Edit First: <input type="text" ng-model="second.user.name"></p>
+			<hr/>
+			<p>Shared from Service: {{second.model.user.name}}</p>
+			<p>From First Controller: {{first.user.name}}</p>
+			<p>From Second Controller: {{second.user.name}}</p>
+			<p><button ng-click="second.model.sayHello()">Say Hello</button></p>
+			
+		</div>
+	</div>
+</body>
+</html>

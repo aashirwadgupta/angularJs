@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using at sign Scope Functions</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../replace-elements/app.js"></script>
+	
+	<style>
+		p {
+			border:1px solid #000000;
+		}
+		.area-on {
+			border: 1px solid #ff0000;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="MainController as main">
+		<tst-vehicle-view item="firstItem"></tst-vehicle-view>		
+		<tst-vehicle-view item="secondItem"></tst-vehicle-view>		
+	</div>
+</body>

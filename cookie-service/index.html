@@ -1,0 +1,49 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Cookie Service</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-cookies.js"></script>
+	<script type="text/javascript" src="../cookie-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		<p>Key: <input type="text" ng-model="main.itemKey"></p>
+		<p>Value: <input type="text" ng-model="main.itemValue"></p>
+		<p><button ng-click="main.addItem(main.itemKey, main.itemValue)">Add Item</button></p>
+		<hr/>
+		
+		
+		<p> 
+			Get Item:
+			<input type="text" ng-model="main.getKey">
+			<button ng-click="main.getItem(main.getKey)">Get</button>
+		</p>
+		
+		<hr/>
+		
+		<p> 
+			Remove Item:
+			<input type="text" ng-model="main.removeKey">
+			<button ng-click="main.removeItem(main.removeKey)">Remove</button>
+		</p>
+		
+		<hr/>
+		
+		<p>Cookie Values:</p>
+		<ul>
+			<li ng-repeat="key in main.keys">
+				{{ key }} : {{main.getItemValue(key)}}
+			</li>
+		</ul>
+		
+		<hr/>
+		<p>Current Item: <p>
+		<p> {{ main.currentItem }}</p>
+		
+	</div>
+</body>
+</html>

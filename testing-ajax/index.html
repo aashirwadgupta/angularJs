@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Testing Ajax</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-mocks.js"></script>
+	<script type="text/javascript" src="../testing-ajax/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		<h3>Enter the name:</h3> 
+		<p>
+			<input type="text" ng-model="main.searchName">
+			<button ng-click="main.getUser(main.searchName)">Get Data from Github</button>
+		</p>
+		
+		<ul>
+			<li ng-repeat="user in main.users">
+				<p>Name : {{user.name}}</p>
+				<p>Located at : {{user.location}}</p>
+				<p>Email address : {{user.email}}</p>
+			</li>
+		</ul>
+		
+		<hr/>
+	</div>
+</body>
+</html>

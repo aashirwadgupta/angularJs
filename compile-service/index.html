@@ -1,0 +1,30 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Compile Service</title>
+	<script type="text/javascript" src="../lib/jquery-2.2.4.js"></script>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../compile-service/app.js"></script>
+	<style>		
+	</style>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+	
+		<p>Enter field Label:</p>
+		<p><input type="text" ng-model="main.fieldLabel"></p>
+		
+		<p>Enter HTML for new input field:</p>
+		<p><textarea id="htmlinput" ng-model="main.htmlMarkup"></textarea></p>
+		
+		<p><button ng-click="main.addNewField(main.htmlMarkup)">Add new Field</button></p>
+		
+		<hr/>
+		
+		<div id="myDiv">
+			<p>Place Holder Container:</p>
+		</div>
+	</div>
+</body>
+</html>
